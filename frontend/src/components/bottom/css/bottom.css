@@ -1,0 +1,86 @@
+.bottom {
+  background: #5e222e;
+  padding: 40px 0 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-family: light;
+}
+
+.bottom .bottom-label {
+  width: 40%;
+  margin-left: 20px;
+}
+
+.bottom .bottom-label h2 {
+  font-family: boldd;
+  font-size: 40px;
+  margin: 10px 0 5px 0;
+}
+
+.bottom .bottom-label h2 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bottom .bottom-label p {
+  color: #BCBCBC;
+}
+
+.bottom .bottom-contact {
+  width: 40%;
+  margin-top: 20px;
+  padding: 0 20px 0 50px;
+}
+
+.bottom .bottom-contact .bottom-contact-labels {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.bottom .bottom-contact .bottom-contacts-contact {
+  color: #BCBCBC;
+}
+
+.bottom .bottom-contact p:nth-child(3) {
+  margin: 10px 0 25px 0;
+}
+
+.bottom .bottom-socials {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bottom .bottom-socials .bottom-socials-icon {
+  font-size: 35px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.bottom .bottom-socials .bottom-socials-icon:nth-child(2) {
+  margin: 15px 0;
+}
+
+.bottom .bottom-socials .bottom-socials-icon:hover {
+  color: #B2B2B2;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/*# sourceMappingURL=bottom.css.map */

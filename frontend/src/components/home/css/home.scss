@@ -1,0 +1,204 @@
+$black: #353535;
+
+.home {
+	.home-header {
+		background: url(../img/mensbg.webp) no-repeat 100% 50%;
+		background-size: cover;
+		height: 500px;
+		background-attachment: fixed;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			background: rgba(0, 0, 0, 0.6);
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+
+		.home-nav {
+			position: relative;
+			z-index: 2;
+			display: flex;
+			justify-content: space-between;
+			
+			h1 {
+				font-family: boldd;
+				font-size: 55px;
+				margin: 10px 0 0 15px;
+
+				a {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+	
+			.home-navbar {
+				margin: 30px 20px 0 0;
+				
+				p {
+					display: inline-block;
+					font-size: 24px;
+	
+					&:last-child {
+						margin-left: 20px;
+					}
+					
+					a {
+						color: #fff;
+						font-family: light;
+						text-decoration: none;
+	
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+
+		.home-nav-body {
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			transform: translateY(-50%);
+			
+			p {
+				color: #fff;
+				font-family: light;
+				font-size: 25px;
+				line-height: 1.5;
+				width: 90%;
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+	}
+
+	.home-underline {
+		height: 2px;
+		background: $black;
+		width: 100px;
+		margin: 8px auto 15px auto;
+	}
+	
+	.home-goal {
+		.home-who, .home-team {
+			display: flex;
+			justify-content: center;
+			height: 500px;
+			
+			.home-left {
+				width: 45%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+
+				div {
+					h2 {
+						text-align: center;
+						font-family: boldd;
+						color: $black;
+					}
+		
+					p {
+						width: 90%;
+						text-align: center;
+						margin: 0 auto;
+						font-family: light;
+						color: $black;
+						line-height: 1.5;
+					}
+				}
+			}
+
+			.home-right {
+				background: url(../img/who.webp) no-repeat 100% 100%;
+				width: 55%;
+				background-size: contain;
+				height: 100%;
+				background-attachment: fixed;
+				position: relative;
+
+				&::before {
+					content: '';
+					background: rgba(0, 0, 0, 0.5);
+					width: 100%;
+					height: 100%;
+					position: absolute;
+				}
+			}
+		}
+
+		.home-team {
+			.home-right {
+				background: url(../img/team.webp) no-repeat 100% 100%;
+				width: 55%;
+				background-size: contain;
+				height: 100%;
+				background-attachment: fixed;
+				position: relative;
+			}
+		}
+
+		.home-goal {
+			display: flex;
+			justify-content: center;
+			height: 500px;
+			
+			.home-right {
+				width: 55%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+
+				div {
+					h2 {
+						text-align: center;
+						font-family: boldd;
+						color: $black;
+					}
+		
+					p {
+						width: 90%;
+						text-align: center;
+						margin: 0 auto;
+						font-family: light;
+						color: $black;
+						line-height: 1.5;
+					}
+				}
+			}
+
+			.home-left {
+				background: url(../img/goals.webp) no-repeat 0% 100%;
+				width: 45%;
+				background-size: contain;
+				height: 100%;
+				position: relative;
+				background-attachment: fixed;
+
+				&::before {
+					content: '';
+					background: rgba(0, 0, 0, 0.5);
+					width: 100%;
+					height: 100%;
+					position: absolute;
+				}
+			}
+		}
+	}
+
+	.home-latest-blogs {
+		margin: 55px 0;
+		
+		h2 {
+			text-align: center;
+			font-family: boldd;
+			color: $black;
+		}
+	}
+}

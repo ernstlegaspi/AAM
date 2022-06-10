@@ -1,0 +1,224 @@
+.home .home-header {
+  background: url(../img/mensbg.webp) no-repeat 100% 50%;
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.home .home-header::before {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.home .home-header .home-nav {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home .home-header .home-nav h1 {
+  font-family: boldd;
+  font-size: 55px;
+  margin: 10px 0 0 15px;
+}
+
+.home .home-header .home-nav h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home .home-header .home-nav .home-navbar {
+  margin: 30px 20px 0 0;
+}
+
+.home .home-header .home-nav .home-navbar p {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.home .home-header .home-nav .home-navbar p:last-child {
+  margin-left: 20px;
+}
+
+.home .home-header .home-nav .home-navbar p a {
+  color: #fff;
+  font-family: light;
+  text-decoration: none;
+}
+
+.home .home-header .home-nav .home-navbar p a:hover {
+  text-decoration: underline;
+}
+
+.home .home-header .home-nav-body {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.home .home-header .home-nav-body p {
+  color: #fff;
+  font-family: light;
+  font-size: 25px;
+  line-height: 1.5;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home .home-underline {
+  height: 2px;
+  background: #353535;
+  width: 100px;
+  margin: 8px auto 15px auto;
+}
+
+.home .home-goal .home-who, .home .home-goal .home-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 500px;
+}
+
+.home .home-goal .home-who .home-left, .home .home-goal .home-team .home-left {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .home-goal .home-who .home-left div h2, .home .home-goal .home-team .home-left div h2 {
+  text-align: center;
+  font-family: boldd;
+  color: #353535;
+}
+
+.home .home-goal .home-who .home-left div p, .home .home-goal .home-team .home-left div p {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  font-family: light;
+  color: #353535;
+  line-height: 1.5;
+}
+
+.home .home-goal .home-who .home-right, .home .home-goal .home-team .home-right {
+  background: url(../img/who.webp) no-repeat 100% 100%;
+  width: 55%;
+  background-size: contain;
+  height: 100%;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.home .home-goal .home-who .home-right::before, .home .home-goal .home-team .home-right::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.home .home-goal .home-team .home-right {
+  background: url(../img/team.webp) no-repeat 100% 100%;
+  width: 55%;
+  background-size: contain;
+  height: 100%;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.home .home-goal .home-goal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 500px;
+}
+
+.home .home-goal .home-goal .home-right {
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .home-goal .home-goal .home-right div h2 {
+  text-align: center;
+  font-family: boldd;
+  color: #353535;
+}
+
+.home .home-goal .home-goal .home-right div p {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  font-family: light;
+  color: #353535;
+  line-height: 1.5;
+}
+
+.home .home-goal .home-goal .home-left {
+  background: url(../img/goals.webp) no-repeat 0% 100%;
+  width: 45%;
+  background-size: contain;
+  height: 100%;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.home .home-goal .home-goal .home-left::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.home .home-latest-blogs {
+  margin: 55px 0;
+}
+
+.home .home-latest-blogs h2 {
+  text-align: center;
+  font-family: boldd;
+  color: #353535;
+}
+/*# sourceMappingURL=home.css.map */
