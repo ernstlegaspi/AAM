@@ -11,6 +11,18 @@ export const getBlogs = async (req, res) => {
 	}
 }
 
+export const getSingleBlog = async (req, res) => {
+	try {
+		const { title } = req.params
+		const blog = await Blogs.findOne({ title: title })
+
+		res.status(200).json(blog)
+	}
+	catch(e) {
+		res.status(400).json({ message: e.message })
+	}
+}
+
 export const getLatestBlogs = async (req, res) => {
 	try {
 		const blogs = await Blogs.find()
@@ -30,7 +42,7 @@ export const getLatestBlogs = async (req, res) => {
 export const addBlog = async (req, res) => {
 	try {
 		const data = req.body
-		const blogData = new Blogs(data)
+		const blogData = new Blogs({ ...data, title: data.title.replace(/ /g, "-") })
 		
 		await blogData.save()
 		res.status(200).json(blogData)
