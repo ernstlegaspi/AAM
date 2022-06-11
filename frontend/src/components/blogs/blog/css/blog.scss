@@ -1,5 +1,14 @@
 $black: #353535;
 
+.blog-circle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	// margin-bottom: 30px;
+	height: 40vh;
+}
+
 .blog {
 	padding: 0 30px 40px 30px;
 
@@ -11,6 +20,7 @@ $black: #353535;
 		border: 1px solid $black;
 		color: $black;
 		text-decoration: none;
+		cursor: pointer;
 
 		div {
 			height: 200px;

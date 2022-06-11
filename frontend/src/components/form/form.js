@@ -17,7 +17,7 @@ const Form = () => {
 	return(
 		<form onSubmit={handleSubmit}>
 			<input type="text" name="title" placeholder="Title" onChange={e => setFormData({ ...getFormData, title: e.target.value })} /> <br />
-			<input type="text" name="description" placeholder="Description" onChange={e => setFormData({ ...getFormData, description: e.target.value })} /> <br />
+			<textarea name="description" placeholder="Description" onChange={e => setFormData({ ...getFormData, description: e.target.value })}></textarea><br />
 			<Filebase onDone={({ base64 }) => setFormData({ ...getFormData, image: base64 })} />
 			<input type="submit" value="Submit" />
 		</form>

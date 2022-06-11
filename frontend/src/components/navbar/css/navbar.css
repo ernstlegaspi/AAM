@@ -1,0 +1,45 @@
+.navbar {
+  background: #5e222e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.navbar h1 {
+  font-family: boldd;
+  font-size: 55px;
+  margin: 10px 0 0 15px;
+}
+
+.navbar h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav {
+  margin: 30px 20px 0 0;
+}
+
+.navbar .navbar-nav p {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.navbar .navbar-nav p:last-child {
+  margin-left: 20px;
+}
+
+.navbar .navbar-nav p a {
+  color: #fff;
+  font-family: light;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav p a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=navbar.css.map */

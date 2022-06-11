@@ -13,6 +13,7 @@ $black: #353535;
 		text-decoration: none;
 		position: relative;
 		overflow: hidden;
+		cursor: pointer;
 
 		&:not(:last-child) {
 			margin-right: 15px;

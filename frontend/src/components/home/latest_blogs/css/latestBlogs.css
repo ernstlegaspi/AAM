@@ -16,6 +16,7 @@
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .latest-blogs .latest-blog:not(:last-child) {

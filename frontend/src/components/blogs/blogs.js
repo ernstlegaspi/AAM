@@ -15,13 +15,6 @@ const Blogs = () => {
 	
 	return(
 		<div className="blogs">
-			<div className="blogs-nav">
-				<h1><a href="/">AAM</a></h1>
-				<div className="blogs-navbar">
-					<p><a href="/blogs/">Blogs</a></p>
-					<p><a href="/login/">Login</a></p>
-				</div>
-			</div>
 			<h2>Blogs</h2>
 			<div className="blogs-underline"></div>
 			<Blog />

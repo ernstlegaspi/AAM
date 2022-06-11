@@ -1,6 +1,6 @@
 import * as api from '../api/api'
 
-import { GET_BLOGS, GET_LATEST_BLOGS, ADD_BLOG } from '../constants/constants'
+import { GET_BLOGS, GET_SINGLE_BLOG, GET_LATEST_BLOGS, ADD_BLOG } from '../constants/constants'
 
 export const getBlogs = () => async dispatch => {
 	try {
@@ -10,6 +10,17 @@ export const getBlogs = () => async dispatch => {
 	}
 	catch(e) {
 		console.log(`Get Blogs: ${e}`)
+	}
+}
+
+	export const getSingleBlog = title => async dispatch => {
+	try {
+		const { data } = await api.getSingleBlog(title)
+		
+		dispatch({ type: GET_SINGLE_BLOG, payload: { ...data, title: data.title.replace(/-/g, " ") } })
+	}
+	catch(e) {
+		console.log(`Get Single Blog: ${e}`)
 	}
 }
 
