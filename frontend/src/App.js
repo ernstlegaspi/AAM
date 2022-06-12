@@ -6,7 +6,7 @@ import Form from './components/form/form'
 import Bottom from './components/bottom/bottom'
 import Blogs from './components/blogs/blogs'
 import BlogPage from './components/blog_page/blogPage'
-// import Navbar from './components/navbar/navbar'
+import Navbar from './components/navbar/navbar'
 
 import './css/app.css'
 
@@ -14,7 +14,7 @@ const App = () => {
 	return(
 		<div className="app-max-width">
 			<BrowserRouter>
-				{/* { window.lo } */}
+				{ window.location.pathname === "/" ? null : <Navbar /> }
 				<Routes>
 					<Route exact path='/' element={<Home />} />
 					<Route exact path='/form/' element={<Form />} />
