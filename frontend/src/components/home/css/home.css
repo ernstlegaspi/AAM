@@ -39,15 +39,14 @@
 
 .home .home-header .home-nav .home-navbar {
   margin: 30px 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .home .home-header .home-nav .home-navbar p {
   display: inline-block;
   font-size: 24px;
-}
-
-.home .home-header .home-nav .home-navbar p:last-child {
-  margin-left: 20px;
 }
 
 .home .home-header .home-nav .home-navbar p a {
@@ -58,6 +57,67 @@
 
 .home .home-header .home-nav .home-navbar p a:hover {
   text-decoration: underline;
+}
+
+.home .home-header .home-nav .home-navbar .home-nav-blogs-label {
+  margin-right: 20px;
+}
+
+.home .home-header .home-nav .home-navbar #home-profile {
+  display: inline-block;
+}
+
+.home .home-header .home-nav .home-navbar #home-profile #home-picture {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.home .home-header .home-nav .home-navbar #home-profile #home-picture .home-logged-in {
+  background: #fff;
+  border-radius: 100%;
+  width: 35px;
+  height: 30px;
+  padding-top: 3px;
+  text-align: center;
+  font-family: light;
+  color: #353535;
+}
+
+.home .home-header .home-nav .home-navbar #home-profile #home-menu {
+  position: absolute;
+  right: 2%;
+  -webkit-transform: translateX(2%);
+          transform: translateX(2%);
+  font-family: light;
+  display: none;
+}
+
+.home .home-header .home-nav .home-navbar #home-profile #home-menu #home-choices {
+  width: 120px;
+  margin-top: 10px;
+  opacity: 0;
+}
+
+.home .home-header .home-nav .home-navbar #home-profile #home-menu #home-choices p {
+  font-size: 19px;
+  color: #353535;
+  background: #E9E9E9;
+  padding: 3px 0 3px 5px;
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.home .home-header .home-nav .home-navbar #home-profile #home-menu #home-choices p:hover {
+  background: #1B1B1B;
+  color: #E9E9E9;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.home .home-header .home-nav .home-navbar #home-profile #home-menu #home-choices p:last-child {
+  margin-top: 5px;
 }
 
 .home .home-header .home-nav-body {

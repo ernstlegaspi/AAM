@@ -1,4 +1,6 @@
 $black: #353535;
+$red: #5e222e;
+$white: #E9E9E9;
 
 .home {
 	.home-header {
@@ -36,15 +38,12 @@ $black: #353535;
 	
 			.home-navbar {
 				margin: 30px 20px 0 0;
+				display: flex;
 				
 				p {
 					display: inline-block;
 					font-size: 24px;
 	
-					&:last-child {
-						margin-left: 20px;
-					}
-					
 					a {
 						color: #fff;
 						font-family: light;
@@ -52,6 +51,64 @@ $black: #353535;
 	
 						&:hover {
 							text-decoration: underline;
+						}
+					}
+				}
+
+				.home-nav-blogs-label {
+					margin-right: 20px;
+				}
+
+				#home-profile {
+					display: inline-block;
+					
+					#home-picture {
+						display: inline-block;
+						text-decoration: none;
+	
+						.home-logged-in {
+							background: #fff;
+							border-radius: 100%;
+							width: 35px;
+							height: 30px;
+							padding-top: 3px;
+							text-align: center;
+							font-family: light;
+							color: $black;
+						}
+					}
+
+					#home-menu {
+						position: absolute;
+						right: 2%;
+						transform: translateX(2%);
+						font-family: light;
+						display: none;
+						
+						#home-choices {
+							width: 120px;
+							margin-top: 10px;
+							opacity: 0;
+
+							p {
+								font-size: 19px;
+								color: $black;
+								background: $white;
+								padding: 3px 0 3px 5px;
+								width: 100%;
+								cursor: pointer;
+								transition: all 0.3s;
+
+								&:hover {
+									background: #1B1B1B;
+									color: $white;
+									transition: all 0.3s;
+								}
+								
+								&:last-child {
+									margin-top: 5px;
+								}
+							}
 						}
 					}
 				}

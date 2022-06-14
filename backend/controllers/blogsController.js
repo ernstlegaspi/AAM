@@ -42,6 +42,7 @@ export const getLatestBlogs = async (req, res) => {
 export const addBlog = async (req, res) => {
 	try {
 		const data = req.body
+		console.log(req.userId)
 		const blogData = new Blogs({ ...data, title: data.title.replace(/ /g, "-") })
 		
 		await blogData.save()

@@ -1,3 +1,5 @@
+$black: #353535;
+
 .navbar {
 	background: #5e222e;
 	display: flex;
@@ -34,6 +36,22 @@
 				&:hover {
 					text-decoration: underline;
 				}
+			}
+		}
+
+		a {
+			display: inline-block;
+			text-decoration: none;
+
+			.navbar-logged-in {
+				background: #fff;
+				border-radius: 100%;
+				width: 35px;
+				height: 30px;
+				padding-top: 3px;
+				text-align: center;
+				font-family: light;
+				color: $black;
 			}
 		}
 	}
