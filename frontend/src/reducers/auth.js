@@ -7,7 +7,6 @@ const Auth = (state = { auth: null }, action) => {
 			return { ...state, auth: action?.data }
 		case LOGOUT:
 			localStorage.clear()
-			
 			return { ...state, auth: null }
 		default:
 			return { ...state }

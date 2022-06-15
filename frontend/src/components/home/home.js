@@ -60,7 +60,7 @@ const Home = () => {
 								</a>
 								<div id="home-menu">
 									<div id="home-choices">
-										<p>Saved Blogs</p>
+										<a href="/saved-blogs/">Saved Blogs</a>
 										<p onClick={() => logout()} className="home-logout-button">Logout</p>
 									</div>
 								</div>

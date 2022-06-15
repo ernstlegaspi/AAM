@@ -1,6 +1,6 @@
 import * as api from '../api/api'
 
-import { GET_BLOGS, GET_SINGLE_BLOG, GET_LATEST_BLOGS, ADD_BLOG } from '../constants/constants'
+import { GET_BLOGS, GET_SINGLE_BLOG, GET_LATEST_BLOGS, GET_SAVED_BLOGS, ADD_BLOG } from '../constants/constants'
 
 export const getBlogs = () => async dispatch => {
 	try {
@@ -43,5 +43,34 @@ export const addBlog = formData => async dispatch => {
 	}
 	catch(e) {
 		console.log(`Add Blogs: ${e}`)
+	}
+}
+
+export const getSavedBlogs = () => async dispatch => {
+	try {
+		const { data } = await api.getSavedBlogs()
+		
+		dispatch({ type: GET_SAVED_BLOGS, payload: data })
+	}
+	catch(e) {
+		console.log(`Get Saved Blogs: ${e}`)
+	}
+}
+
+export const addSavedBlog = formData => async () => {
+	try {
+		await api.addSavedBlog(formData)
+	}
+	catch(e) {
+		console.log(`Add Saved Blogs: ${e}`)
+	}
+}
+
+export const deleteSavedBlog = id => async () => {
+	try {
+		await api.deleteSavedBlog(id)
+	}
+	catch(e) {
+		console.log(`Delete Saved Blogs: ${e}`)
 	}
 }
