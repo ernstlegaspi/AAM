@@ -1,4 +1,5 @@
 import Blogs from '../models/blogs.js'
+import SavedBlogs from '../models/savedBlogs.js'
 
 export const getBlogs = async (req, res) => {
 	try {
@@ -39,10 +40,44 @@ export const getLatestBlogs = async (req, res) => {
 	}
 }
 
+export const getSavedBlogs = async (req, res) => {
+	try {
+		const data = await SavedBlogs.find()
+
+		res.status(200).json(data)
+	}
+	catch(e) {
+		res.status(400).json({ message: e.message })
+	}
+}
+
+export const addSavedBlog = async (req, res) => {
+	try {
+		const data = req.body
+		const blogData = new SavedBlogs({ ...data, savedId: req.userId, title: data.title.replace(/ /g, "-") })
+		
+		await blogData.save()
+		res.status(200).json(blogData)
+	}
+	catch(e) {
+		res.status(400).json({ message: e.message })
+	}
+}
+
+export const deleteSavedBlog = async (req, res) => {
+	try {
+		const { id } = req.params
+		
+		await SavedBlogs.findByIdAndDelete(id)
+	}
+	catch(e) {
+		res.status(400).json({ message: e.message })
+	}
+}
+
 export const addBlog = async (req, res) => {
 	try {
 		const data = req.body
-		console.log(req.userId)
 		const blogData = new Blogs({ ...data, title: data.title.replace(/ /g, "-") })
 		
 		await blogData.save()

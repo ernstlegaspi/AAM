@@ -8,10 +8,13 @@ import Blogs from './components/blogs/blogs'
 import BlogPage from './components/blog_page/blogPage'
 import Navbar from './components/navbar/navbar'
 import Login from './components/login/login'
+import SavedBlogs from './components/saved_blogs/savedBlogs'
 
 import './css/app.css'
 
 const App = () => {
+	const token = JSON.parse(localStorage.getItem(`profile`))
+
 	return(
 		<div className="app-max-width">
 			<BrowserRouter>
@@ -22,6 +25,7 @@ const App = () => {
 					<Route exact path='/blogs/' element={<Blogs />} />
 					<Route exact path='/blogs/:title' element={<BlogPage />} />
 					<Route exact path='/login/' element={<Login />} />
+					{ token ? <Route exact path='/saved-blogs/' element={<SavedBlogs />} /> : null }
 				</Routes>
 				<Bottom />
 			</BrowserRouter>

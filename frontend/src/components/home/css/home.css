@@ -98,6 +98,26 @@
   opacity: 0;
 }
 
+.home .home-header .home-nav .home-navbar #home-profile #home-menu #home-choices a {
+  font-size: 19px;
+  color: #353535;
+  background: #E9E9E9;
+  padding: 3px 0 3px 5px;
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.home .home-header .home-nav .home-navbar #home-profile #home-menu #home-choices a:hover {
+  background: #1B1B1B;
+  color: #E9E9E9;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .home .home-header .home-nav .home-navbar #home-profile #home-menu #home-choices p {
   font-size: 19px;
   color: #353535;

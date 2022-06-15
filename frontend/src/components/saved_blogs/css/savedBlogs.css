@@ -1,4 +1,18 @@
-.blog-circle {
+.saved-blog-label h1 {
+  text-align: center;
+  font-family: boldd;
+  margin-top: 15px;
+  color: #353535;
+}
+
+.saved-blog-label .saved-blogs-underline {
+  background: #353535;
+  height: 2px;
+  width: 65px;
+  margin: 8px auto 30px auto;
+}
+
+.saved-blog-label .saved-blog-circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,15 +29,15 @@
   height: 40vh;
 }
 
-.blog {
+.saved-blog-label .saved-blog {
   padding: 0 30px 40px 30px;
 }
 
-.blog .blog-grid {
+.saved-blog-label .saved-blog .saved-blog-grid {
   position: relative;
 }
 
-.blog .blog-grid .blog-content {
+.saved-blog-label .saved-blog .saved-blog-grid .saved-blog-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,28 +57,28 @@
   cursor: pointer;
 }
 
-.blog .blog-grid .blog-content div {
+.saved-blog-label .saved-blog .saved-blog-grid .saved-blog-content div {
   height: 200px;
   width: 100%;
   overflow: hidden;
 }
 
-.blog .blog-grid .blog-content div img {
+.saved-blog-label .saved-blog .saved-blog-grid .saved-blog-content div img {
   width: 100%;
   height: 100%;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.blog .blog-grid .blog-content div img:hover {
+.saved-blog-label .saved-blog .saved-blog-grid .saved-blog-content div img:hover {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
 }
 
-.blog .blog-grid .blog-content p {
+.saved-blog-label .saved-blog .saved-blog-grid .saved-blog-content p {
   font-family: light;
   padding: 10px 0;
 }
-/*# sourceMappingURL=blog.css.map */
+/*# sourceMappingURL=savedBlogs.css.map */

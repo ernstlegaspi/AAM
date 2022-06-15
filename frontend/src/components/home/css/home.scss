@@ -90,6 +90,24 @@ $white: #E9E9E9;
 							margin-top: 10px;
 							opacity: 0;
 
+							a {
+								font-size: 19px;
+								color: $black;
+								background: $white;
+								padding: 3px 0 3px 5px;
+								width: 100%;
+								cursor: pointer;
+								transition: all 0.3s;
+								text-decoration: none;
+								display: inline-block;
+
+								&:hover {
+									background: #1B1B1B;
+									color: $white;
+									transition: all 0.3s;
+								}
+							}
+
 							p {
 								font-size: 19px;
 								color: $black;
