@@ -20,8 +20,26 @@
   text-decoration: none;
 }
 
+.navbar .login-label {
+  color: #fff;
+  font-family: light;
+  cursor: pointer;
+}
+
+.navbar .login-label:hover {
+  text-decoration: underline;
+}
+
 .navbar .navbar-nav {
   margin: 30px 20px 0 0;
+  position: relative;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .navbar .navbar-nav .blogs-label {
@@ -41,6 +59,88 @@
 
 .navbar .navbar-nav p a:hover {
   text-decoration: underline;
+}
+
+.navbar .navbar-nav form {
+  background: #fff;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  -webkit-transform: translate(0%);
+          transform: translate(0%);
+}
+
+.navbar .navbar-nav form .navbar-close {
+  position: absolute;
+  right: 2%;
+  -webkit-transform: translate(2%);
+          transform: translate(2%);
+  margin-top: 5px;
+  cursor: pointer;
+  color: #5e222e;
+}
+
+.navbar .navbar-nav form .navbar-fields {
+  margin-top: 35px;
+  padding-left: 20px;
+}
+
+.navbar .navbar-nav form .navbar-fields input {
+  width: 90%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #353535;
+  padding: 3px 0;
+  color: #353535;
+  text-indent: 3px;
+  margin-bottom: 20px;
+}
+
+.navbar .navbar-nav form .navbar-fields input::-webkit-input-placeholder {
+  font-family: light;
+}
+
+.navbar .navbar-nav form .navbar-fields input:-ms-input-placeholder {
+  font-family: light;
+}
+
+.navbar .navbar-nav form .navbar-fields input::-ms-input-placeholder {
+  font-family: light;
+}
+
+.navbar .navbar-nav form .navbar-fields input::placeholder {
+  font-family: light;
+}
+
+.navbar .navbar-nav form .navbar-fields input[type="submit"] {
+  background: #5e222e;
+  border: #5e222e;
+  color: #fff;
+  width: 100px;
+  cursor: pointer;
+  font-family: light;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar .navbar-nav form .navbar-fields input[type="submit"]:hover {
+  width: 120px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar .navbar-nav form .navbar-fields p {
+  color: #353535;
+  font-family: light;
+  font-size: 13px;
+  margin: 0 20px 15px 0;
+}
+
+.navbar .navbar-nav form .navbar-fields p span {
+  color: #5e222e;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .navbar .navbar-nav #navbar-profile {
@@ -70,16 +170,6 @@
           transform: translateX(2%);
   font-family: light;
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .navbar .navbar-nav #navbar-profile #navbar-menu #navbar-choices {

@@ -29,6 +29,12 @@
   height: 40vh;
 }
 
+.saved-blog-label .saved-blog-circle p {
+  font-family: light;
+  color: #353535;
+  font-size: 25px;
+}
+
 .saved-blog-label .saved-blog {
   padding: 0 30px 40px 30px;
 }
