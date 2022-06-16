@@ -7,7 +7,7 @@ export const login = (loginData, redirect) => async dispatch => {
 		const { data } = await api.login(loginData)
 
 		dispatch({ type: AUTH, data })
-		redirect("/")
+		window.location.pathname = "/"
 	}
 	catch(e) {
 		console.log(`Login: ${e}`)

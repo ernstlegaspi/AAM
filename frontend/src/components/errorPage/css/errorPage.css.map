@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACX,MAAM,EAAE,MAAM;EACd,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;CAOvB;;AAZD,AAOC,WAPU,CAOV,CAAC,CAAC;EACD,WAAW,EAAE,KAAK;EAClB,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,IAAI;CACf",
+    "sources": [
+        "errorPage.scss"
+    ],
+    "names": [],
+    "file": "errorPage.css"
+}

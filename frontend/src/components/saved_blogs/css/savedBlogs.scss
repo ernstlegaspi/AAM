@@ -22,6 +22,12 @@ $red: #5e222e;
 		justify-content: center;
 		align-items: center;
 		height: 40vh;
+
+		p {
+			font-family: light;
+			color: $black;
+			font-size: 25px;
+		}
 	}
 	
 	.saved-blog {

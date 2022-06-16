@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { Close } from '@material-ui/icons'
+import { Grow } from '@material-ui/core'
 
 import './css/navbar.css'
 import { LOGOUT } from '../../constants/constants'
+import { login, register } from '../../actions/auth'
 
 const Navbar = () => {
 	const [getLogout, setLogout] = useState(false)
+	const [getIsLogin, setIsLogin] = useState(true)
+	const [getMenu, setMenu] = useState(false)
+	const [formData, setFormData] = useState({ username: '', email: '', password: '' })
 	const getUsername = JSON.parse(localStorage.getItem(`profile`))
 	const navigate = useNavigate()
 	const dispatch = useDispatch()
@@ -36,16 +42,31 @@ const Navbar = () => {
 	const logout = () => {
 		dispatch({ type: LOGOUT })
 		setLogout(false)
-		navigate("/")
+		window.location.pathname = "/"
 	}
+
+	const menuClick = () => {
+		setMenu(getMenu ? false : true)
+		setIsLogin(true)
+	}
+
+	const formClick = () => setIsLogin(getIsLogin ? false : true)
+	
+	const handleFormSubmit = e => {
+		e.preventDefault()
+
+		dispatch(getIsLogin ? login(formData, navigate) : register(formData, navigate))
+	}
+
+	const setForm = e => setFormData({ ...formData, [e.target.name]: e.target.value })
 	
 	return(
 		<div className="navbar">
 			<h1><a href="/">AAM</a></h1>
 			<div className="navbar-nav">
 				<p className="blogs-label"><a href="/blogs/">Blogs</a></p>
-				{ getUsername ?
-					<div id="navbar-profile">
+				{
+					getUsername ? <div id="navbar-profile">
 						<a id="navbar-picture" href="/">
 							<p className="navbar-logged-in">{getUsername.username.toUpperCase().charAt(0)}</p>
 						</a>
@@ -56,7 +77,27 @@ const Navbar = () => {
 							</div>
 						</div>
 					</div>
-				: <p><a href="/login/">Login</a></p> }
+					: getMenu ? <Grow in>
+						<form onSubmit={handleFormSubmit}>
+							<Close onClick={() => menuClick()} className="navbar-close" />
+							<div className="navbar-fields">
+								<input type="text" placeholder="Username" name="username" autoComplete='off' onChange={setForm} /><br />
+								{
+									getIsLogin ? null : <><input type="email" placeholder="Email" name="email" onChange={setForm} /><br /></>
+								}
+								<input type="password" placeholder="Password" name="password" onChange={setForm} /> <br />
+								{
+									getIsLogin ? null : <><input type="password" placeholder="Confirm Password" /><br /></>
+								}
+								<input type="submit" value="Submit" /> <br />
+								{
+									getIsLogin ? <p>Don't have an account? <span onClick={() => formClick()}>Register here</span></p>
+									: <p>Already have an account? <span onClick={() => formClick()}>Login here</span></p>
+								}
+							</div>
+						</form>
+					</Grow> : <p className="login-label" onClick={() => menuClick()}>Login</p>
+				}
 			</div>
 		</div>
 	)

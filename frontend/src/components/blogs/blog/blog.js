@@ -9,6 +9,7 @@ import Star from './star/star'
 const Blog = () => {
 	const blogs = useSelector(blog => blog.reducers.blog)
 	const navigate = useNavigate()
+	const token = JSON.parse(localStorage.getItem(`profile`))
 
 	const blogClick = title => navigate(`/blogs/${title}`)
 
@@ -20,7 +21,7 @@ const Blog = () => {
 				{
 					blogs.map(blog => {
 						return <Grid className="blog-grid" key={blog._id} item xs={4}>
-							<Star blog={blog} />
+							{token ? <Star blog={blog} /> : null}
 							<div onClick={() => blogClick(blog.title)} className="blog-content">
 								<div>
 									<img src={blog.image} loading="lazy" alt={blog.title} />

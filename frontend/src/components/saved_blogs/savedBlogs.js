@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Grid, CircularProgress } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import { useNavigate } from 'react-router-dom'
 
 import "./css/savedBlogs.css"
@@ -16,7 +16,6 @@ const SavedBlogs = () => {
 	
 	useEffect(() => {
 		dispatch(getSavedBlogs())
-		console.log(savedBlogs)
 	}, [savedBlogs, dispatch])
 
 	return(
@@ -25,7 +24,7 @@ const SavedBlogs = () => {
 			<div className="saved-blogs-underline"></div>
 			{
 				savedBlogs.length === 0 ? <div className="saved-blog-circle">
-					<CircularProgress />
+					<p>No Saved Blogs</p>
 				</div> : <div className="saved-blog">
 					<Grid className="saved-blog" container spacing={2}>
 						{

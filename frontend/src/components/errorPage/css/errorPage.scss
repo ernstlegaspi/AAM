@@ -1,0 +1,13 @@
+.error-page {
+	height: 40.6vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	p {
+		font-family: light;
+		color: #353535;
+		font-size: 30px;
+	}
+}
