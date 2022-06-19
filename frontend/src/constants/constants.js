@@ -5,4 +5,5 @@ export const GET_SAVED_BLOGS = "GET_SAVED_BLOGS"
 export const ADD_BLOG = "ADD_BLOG"
 
 export const AUTH = "AUTH"
+export const ADMIN_AUTH = "ADMIN_AUTH"
 export const LOGOUT = "LOGOUT"

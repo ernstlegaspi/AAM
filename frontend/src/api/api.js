@@ -18,3 +18,5 @@ export const deleteSavedBlog = id => API.delete(`blogs/saved/${id}`)
 
 export const login = loginData => API.post(`/auth/login`, loginData)
 export const register = registerData => API.post(`/auth/register`, registerData)
+
+export const adminLogin = loginData => API.post(`/auth/admin-login`, loginData)

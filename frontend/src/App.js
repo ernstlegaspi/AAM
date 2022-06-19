@@ -9,6 +9,7 @@ import BlogPage from './components/blog_page/blogPage'
 import Navbar from './components/navbar/navbar'
 import SavedBlogs from './components/saved_blogs/savedBlogs'
 import Page404 from './components/errorPage/errorPage'
+import AdminPage from './components/admin_page/adminPage'
 
 import './css/app.css'
 
@@ -24,6 +25,7 @@ const App = () => {
 					<Route exact path='/form/' element={<Form />} />
 					<Route exact path='/blogs/' element={<Blogs />} />
 					<Route exact path='/blogs/:title' element={<BlogPage />} />
+					<Route exact path='/admin-page/' element={<AdminPage />} />
 					{ token ? <Route exact path='/saved-blogs/' element={<SavedBlogs />} /> : null }
 					<Route path="/*" element={<Page404 />} />
 				</Routes>

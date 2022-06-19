@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
 import User from '../models/user.js'
+import Admin from '../models/admin.js'
 
 export const loginController = async (req, res) => {
 	try {
@@ -36,6 +37,25 @@ export const registerController = async (req, res) => {
 		const token = jwt.sign({ username: result.username, id: result._id }, "secret", { expiresIn: '3h' })
 
 		res.status(200).json({ username: result.username, email: result.email, token })
+	}
+	catch(e) {
+		res.status(500).json({ message: e.message })
+	}
+}
+
+export const adminLoginController = async (req, res) => {
+	try {
+		const { username, password } = req.body
+		const existingUser = await Admin.findOne({ username })
+		
+		if(!existingUser) return res.status(404).json({ message: "User not found" })
+
+		const comparePassword = await bcrypt.compare(password, existingUser.password)
+		if(!comparePassword) return res.status(400).json({ message: "Password is incorrect" })
+		
+		const token = jwt.sign({ username: existingUser.username, id: existingUser._id }, "admin", { expiresIn: '3h' })
+		
+		res.status(200).json({ username: existingUser.username, id: existingUser._id, token })
 	}
 	catch(e) {
 		res.status(500).json({ message: e.message })

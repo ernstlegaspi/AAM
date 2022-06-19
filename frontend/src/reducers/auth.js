@@ -1,9 +1,12 @@
-import { AUTH, LOGOUT } from "../constants/constants";
+import { AUTH, ADMIN_AUTH, LOGOUT } from "../constants/constants";
 
 const Auth = (state = { auth: null }, action) => {
 	switch(action.type) {
 		case AUTH:
 			localStorage.setItem('profile', JSON.stringify({ ...action?.data }))
+			return { ...state, auth: action?.data }
+		case ADMIN_AUTH:
+			localStorage.setItem('admin', JSON.stringify({ ...action?.data }))
 			return { ...state, auth: action?.data }
 		case LOGOUT:
 			localStorage.clear()
