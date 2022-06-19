@@ -1,8 +1,8 @@
 import * as api from '../api/api'
 
-import { AUTH } from '../constants/constants'
+import { AUTH, ADMIN_AUTH } from '../constants/constants'
 
-export const login = (loginData, redirect) => async dispatch => {
+export const login = (loginData) => async dispatch => {
 	try {
 		const { data } = await api.login(loginData)
 
@@ -23,5 +23,17 @@ export const register = (registerData, redirect) => async dispatch => {
 	}
 	catch(e) {
 		console.log(`Register: ${e}`)
+	}
+}
+
+export const adminLogin = loginData => async dispatch => {
+	try {
+		const { data } = await api.adminLogin(loginData)
+
+		dispatch({ type: ADMIN_AUTH, data })
+		window.location.pathname = "/admin-page/"
+	}
+	catch(e) {
+		console.log(`Login: ${e}`)
 	}
 }
