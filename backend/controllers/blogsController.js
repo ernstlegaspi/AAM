@@ -17,7 +17,7 @@ export const getSingleBlog = async (req, res) => {
 		const { title } = req.params
 		const blog = await Blogs.findOne({ title: title })
 
-		res.status(200).json(blog)
+		res.status(200).json({ ...blog, title: blog.title.replace(/-/g, " ") })
 	}
 	catch(e) {
 		res.status(400).json({ message: e.message })
