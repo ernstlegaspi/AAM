@@ -1,0 +1,45 @@
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 0;
+}
+
+.form form {
+  border: 1px solid #353535;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form form input[type="text"], .form form textarea {
+  width: 100%;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #353535;
+  resize: none;
+}
+
+.form form input[type="text"] {
+  padding: 10px 0;
+}
+
+.form form textarea {
+  height: 100px;
+}
+
+.form form .form-button {
+  width: 100%;
+  background: #5e222e;
+  color: #fff;
+}
+/*# sourceMappingURL=form.css.map */

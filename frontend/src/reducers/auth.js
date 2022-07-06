@@ -7,6 +7,7 @@ const Auth = (state = { auth: null }, action) => {
 			return { ...state, auth: action?.data }
 		case ADMIN_AUTH:
 			localStorage.setItem('admin', JSON.stringify({ ...action?.data }))
+			console.log("Wew")
 			return { ...state, auth: action?.data }
 		case LOGOUT:
 			localStorage.clear()

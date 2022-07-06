@@ -15,13 +15,11 @@ const AdminPage = () => {
 
 	const handleSubmit = e => {
 		e.preventDefault()
-
 		dispatch(adminLogin(getData))
 	}
 
 	const submitData = e => {
 		e.preventDefault()
-
 		dispatch(addBlog(getFormData))
 	}
 	

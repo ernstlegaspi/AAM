@@ -38,6 +38,7 @@ export const getLatestBlogs = () => async dispatch => {
 export const addBlog = formData => async dispatch => {
 	try {
 		const { data } = await api.addBlog(formData)
+		console.log(data)
 		
 		dispatch({ type: ADD_BLOG, payload: data })
 	}

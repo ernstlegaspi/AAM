@@ -16,14 +16,14 @@ const BlogContent = () => {
 	})
 
 	return(
-		blog.length === 0 || (blog.length > 1 && !checkLength) ? <div className="blog-content-waiting">
+		!checkLength || blog.length === 0 || (blog.length > 1 && !checkLength) ? <div className="blog-content-waiting">
 			<Circle />
 		</div> : <div className="blog-content-page">
 			<div className="blog-content-bg">
 				<div className="blog-header">
 					<img src={checkLength.image} alt={checkLength.title} />
 					<div>
-						<h1>{checkLength.title}</h1>
+						<h1>{checkLength.title.replace(/-/g, " ")}</h1>
 						<p>{moment(checkLength.createdAt).format('LL')}</p>
 					</div>
 				</div>
